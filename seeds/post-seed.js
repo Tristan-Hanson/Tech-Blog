@@ -8,7 +8,8 @@ const postData = [
     {
         title: "old post",
         text: "lorem ipsum is too long",
-    },    {
+    },
+    {
         title: "fun post",
         text: "lorem ipsum is not long",
     },

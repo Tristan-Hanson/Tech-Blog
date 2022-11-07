@@ -1,0 +1,13 @@
+
+.header{
+    background: rgba(15, 114, 15, 0.678);
+}
+.card{
+    margin: 30px;
+}
+.navLinks{
+    display: flex;
+}
+.link{
+    margin: 30px;
+}

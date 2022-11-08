@@ -16,14 +16,24 @@
                    <a href="/">home</a>
                 </button>
             </li>
+        {{#if sesh.isLoggedIn}}
             <li class="link">
-                <button>dashboard</button>
+                <a href="/dashboard">
+                    <button>dashboard</button>
+                </a>
             </li>
+            <li class link>
+                <a href="/login/logout">
+                    <button>Logout</button>
+                </a>
+            </li>
+        {{else}}
             <li class="link">
                 <button>
                     <a href="/login">login</a>
                 </button>
             </li>
+        {{/if}}
         </ul>
     </nav>
 </header>

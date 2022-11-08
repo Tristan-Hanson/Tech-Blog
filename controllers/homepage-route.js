@@ -10,10 +10,9 @@ router.get('/', async (req, res) => {
         );
 
         res.render('homepage', {
-            post,
+            post: post, sesh: req.session
         });
     } catch(err){
-        console.log(err);
         res.status(500).json(err)
     }
 })

@@ -32,6 +32,7 @@ router.post('/create', async (req,res)=>{
      if(data.checkPassword(req.body['password-login'])){
        req.session.save( () =>{
          req.session.isLoggedIn = true;
+         req.session.uID = data.id;
          res.redirect("/dashboard");
        });
      }
@@ -42,8 +43,9 @@ router.post('/create', async (req,res)=>{
 
  router.get('/logout', async(req,res) =>{
   if(req.session.isLoggedIn){
-    req.session.save( () =>{
-      req.session.isLoggedIn = false;
+    req.session.destroy( () =>{
+      res.status(200).end();
+      console.log("logged out")
     });
   }
   res.render('homepage')

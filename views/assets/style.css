@@ -11,3 +11,10 @@
 .link{
     margin: 30px;
 }
+#tech{
+    margin: 20px;
+    color: rgb(114, 98, 79);
+    width: 25%;
+    height: 20%;
+    background-color: beige;
+}

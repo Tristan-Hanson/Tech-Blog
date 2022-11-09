@@ -24,9 +24,9 @@ const sesh = {
   })
 };
 
+app.use(session(sesh));
 app.engine('handlebars', engine.engine({ defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
-app.use(session(sesh));
 app.use(routes);
 // app.set('views', './views');
 

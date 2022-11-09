@@ -51,7 +51,7 @@ router.delete('/', async (req, res) =>{
             }
         }).then (() => {
             res.status(204).end();
-            res.render('dashboard')
+            res.redirect('/dashboard')
            });
     } catch(err){
         console.log(err)

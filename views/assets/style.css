@@ -7,6 +7,7 @@
 }
 .navLinks{
     display: flex;
+    
 }
 .link{
     margin: 30px;
@@ -17,4 +18,23 @@
     width: 25%;
     height: 20%;
     background-color: beige;
+}
+.header{
+    display: flex;
+}
+#tech{
+    text-align: center;
+}
+.dashboard-container{
+    display: flex;
+}
+.post-container{
+    width: 60%;
+}
+.form-container{
+    text-align: center;
+}
+.solo-forms{
+    border: 3px solid black;
+    margin: 10px;
 }

@@ -23,5 +23,41 @@ router.get("/", async (req,res) =>{
     }
 });
 
+//user post routes
+router.put('/', async (req, res) =>{
+   try{
+    let update = await Post.update(
+        {
+            text: req.body.text
+        },
+        {
+            where: {
+                title: req.body.title
+            }
+        }
+    );
+     res.status(200).json(update);
+   } catch(err){
+    res.status(500).json(err);
+   }
+})
+
+router.delete('/', async (req, res) =>{
+    console.log(req.body)
+    try{
+        let data = await Post.destroy({
+            where: {
+                title: req.body.title
+            }
+        }).then (() => {
+            res.status(204).end();
+            res.render('dashboard')
+           });
+    } catch(err){
+        console.log(err)
+        res.status(500).json(err)
+    }
+})
+
 
 module.exports = router;

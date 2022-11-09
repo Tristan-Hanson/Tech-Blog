@@ -6,15 +6,11 @@ router.get("/", async (req,res) =>{
 });
 
 router.post("/", async (req,res) =>{
-    // req.session.touch();
-    // console.log(req.body);
-    
-    if(req.session.isLoggedIn){
         req.body['creator_id']=req.session.uID;
-        console.log(req.body);
         let dat = await Post.create(req.body)
         res.redirect("/dashboard");
-    }
 });
+
+
 
 module.exports=router;
